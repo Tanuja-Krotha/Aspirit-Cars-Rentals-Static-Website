@@ -1,0 +1,408 @@
+<html>
+	<head>
+		<title>swift</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+		<link rel="stylesheet" type="text/css" href="CSS/Style.css">
+		<script>
+			function disp(myimg) {
+			  document.getElementById("mainimg").src = myimg.src;
+			}
+
+			function updateContainers() {
+			  var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+			  if (width <= 425) {
+				document.querySelector('.container').style.display = 'block';
+				document.querySelector('.container-fluid').style.display = 'none';
+			  } else {
+				document.querySelector('.container').style.display = 'none';
+				document.querySelector('.container-fluid').style.display = 'block';
+			  }
+			}
+
+			window.onload = function() {
+			  updateContainers();
+			};
+
+			window.addEventListener('resize', function() {
+			  updateContainers();
+			});
+
+		</script>
+		<style>
+		@media (max-width: 768px) {
+		  .carousel-inner img {
+			height: auto;
+			max-width: 100%;
+		  }
+		}
+		@media (max-width: 786px) {
+		  .row {
+			margin: 3px; /* or a smaller margin */
+		  }
+		  .col-md-6, .col-md-4, .col-md-2 {
+			padding: 3px; /* or a smaller padding */
+		  }
+		}
+		</style>
+
+	</head>
+	<body>
+
+		<nav class="navbar navbar-expand-lg  nav-bar navbar-dark fixed-top">
+			<a class="navbar-brand" href="Explore.html">
+				<img src="Images/Page1.png" alt="Home" class="img">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#" data-toggle="modal" data-target="#aboutUsModal">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" data-toggle="modal" data-target="#termsModal">Terms And Conditions</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" data-toggle="modal" data-target="#contactsModal">Contacts</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+			
+		<div class="modal fade" id="aboutUsModal" tabindex="-1" role="dialog" aria-labelledby="aboutUsModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="aboutUsModalLabel">About Us</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>At Aspirit we understand the importance of a hassle-free travel 
+						experience.That’s why we offer top-notch car rental services that
+						cater to all your transportation needs. Our Aspirit was started 
+						by Aravind swami mancha on October 21 ,2022.
+						</p><p>
+						Since then we are providing cars with top notch facilities being 
+						one of the best car rental providers in Hyderabad with excellent
+						customer service and a commitment to providing a seamless ride.
+						</p><p>
+						Aspirit is an excellent choice for anyone looking for a reliable 
+						rental car in Hyderabad.We provide cars for rent with easy booking 
+						process and affordable prices.Whether you're planning a weekend 
+						getaway, a cross-country road trip, or simply need a reliable set
+						of wheels for your daily commute, we've got you covered.What sets us 
+						apart is our commitment to convenience, transparency, and customer 
+						satisfaction.
+						</p><p>
+						So why wait? Start your nextadventure with Aspirit and experience 
+						the freedom of the open road like never before.
+						</p>
+					</div>
+					
+		 		</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>Booking process : Customers can follow the correct booking process by contacting us through 
+						phone and pay the advance for your ride.</p>
+						
+						<p>Driver requirements : The customer should have proper driving  license and should have crossed 
+						18 years of age .</p>
+										
+						<p>Documents to be submitted : The customer should submit RC and should deposit 2-wheeler.</p>
+											
+						<p>Cancellation policy  :The customer should cancel the vehicle one day prior to the selected date of booking .
+						If he/she cancels the booking on the same day of selected date then he/she will be charged with 50% price.</p>
+											
+						<p>Damages and penalties : It is the responsibility of the customer for any damages to the vehicle and the customer 
+						is penalized with 500₹ for any misuse of vehicle or violation of terms .</p>
+					</div>
+      
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="contactsModal" tabindex="-1" role="dialog" aria-labelledby="contactsModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="contactsModalLabel">Contact Us</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>Phone-no : 7680915847</p>
+						<p>WhatsApp : 7680915847</p>
+						<p>Mail-Id : Aravindswamy023@gmail.com</p>
+						<p>Instagram Id : Spirit_selfdrives</p>
+					</div>
+				</div>
+			</div>
+		</div>			
+
+
+
+		<div class="container"  style="display:block;margin-top:90px">
+			<div class="row">
+				<div class="col-md-6 ">
+				    <h2>Maruti Swift</h2>
+					<br>
+					<div id="carouselExample" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+							<li data-target="#carouselExample" data-slide-to="1"></li>
+							<li data-target="#carouselExample" data-slide-to="2"></li>
+							<li data-target="#carouselExample" data-slide-to="3"></li>
+							<li data-target="#carouselExample" data-slide-to="4"></li>
+						</ol>
+							
+						<div class="carousel-inner ">
+							<div class="carousel-item active">
+								<img src="Cars/swif1.jpg"  class="res img-fluid">
+							</div>
+							
+							<div class="carousel-item">
+								<img src="Cars/swif2.jpg"  class="res img-fluid">
+							</div>
+							
+							<div class="carousel-item">
+								<img src="Cars/swif3.jpg"  class="res img-fluid">
+							</div>
+							
+							<div class="carousel-item">
+								<img src="Cars/swif4.jpg"  class="res img-fluid">
+							</div>
+							
+							<div class="carousel-item">
+								<img src="Cars/swif5.jpg"  class="res img-fluid">
+							</div>
+							
+						</div>	
+					</div>
+				</div>
+	
+				<div class="col-md-6 " style="margin-top:20px">	
+					<h5>Price:</h5>
+					<div class="row">
+						<div class="col-md-6 "><br>
+							<div class="price-oval">
+								<span>₹1899/dy</span>
+							</div>
+						</div>
+							
+						<div class="col-md-6 ">
+							<div class="price-oval">
+								<span>₹199/hr</span>
+							</div>
+						</div>
+					</div>
+					<br><br>
+					
+					<div class="row ">
+						<div class="col-md-4 ">
+							<img src="Images/seat.png" class="det">
+							<p>5</p>
+						</div>
+				
+						<div class="col-md-4 ">
+							<img src="Images/type.png" class="det">
+							<p>Hatchback</p>
+						</div>
+						
+						<div class="col-md-4  ">
+							<img src="Images/trol.jpg" class="det">
+							<p>Petrol</p>			
+						</div>
+					</div>
+						
+					<div class="row">
+						<div class="col-md-3 ">
+							<p class="price">No.of cars: 3</p>
+						</div>
+				
+						<div class="col-md-5 ">
+							<p class="price">Colors : Blue-2,Red-1</p>
+						</div>
+							
+						<div class="col-md-4 ">
+							<p class="price">Unlimited Kms</p>
+						</div>
+			
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="container-fluid" style="display:none;margin-top: 90px">
+			<h2>Maruti Swift</h2>
+			<br>	
+			<div class="row">
+				<div class="col-md-2">
+					<div class="card">
+						<div class="card-body">
+							<img src="cars/swif1.jpg" class="res1"  onmouseover="disp(this)" >
+						</div>
+
+						<div class="card-body">
+							<img src="cars/swif2.jpg" class="res1"  onmouseover="disp(this)" >
+						</div>
+						
+						<div class="card-body">
+							<img src="cars/swif3.jpg" class="res1"  onmouseover="disp(this)" >
+						</div>
+						
+						<div class="card-body">
+							<img src="cars/swif4.jpg" class="res1"  onmouseover="disp(this)" >
+						</div>
+						
+						<div class="card-body">
+							<img src="cars/swif5.jpg" class="res1"  onmouseover="disp(this)" >
+						</div>
+						
+					</div>
+				</div>
+
+				<div class="col-md-6"> 
+					<img src="cars/swif1.jpg" class="res"id="mainimg">
+				</div>
+				<div class="col-md-4">
+					<h5>Price:</h5>
+					
+					<div class="row">
+						<div class="col-md-6 ">
+							<div class="price-oval">
+								<span>₹1899/dy</span>
+							</div>
+						</div>
+						<div class="col-md-6 ">
+							<div class="price-oval">
+								<span>₹199/hr</span>
+							</div>
+						</div>
+					</div>
+					<br><br>
+					
+					<div class="row">
+						<div class="col-md-4 ">
+							<img src="Images/seat.png" class="det">
+							<p>5</p>
+						</div>
+						<div class="col-md-4 ">
+							<img src="Images/type.png" class="det">
+							<p>Hatchback</p>
+						</div>
+						<div class="col-md-4  ">
+							<img src="Images/trol.jpg" class="det1">
+							<p>Petrol</p>			
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-4">
+							<p class="price">No.of cars: 3</p>
+						</div>						
+						<div class="col-md-4">
+							<p class="price">Colors : Blue-2,Red-1</p>
+						</div>
+						<div class="col-md-4 ">
+							<p class="price">Unlimited Kms</p>
+						</div>		
+					</div> 
+				</div>
+			</div>
+		</div>
+		<br><br>
+		
+		<footer>
+			<div class="container-fluid ">
+				<div class="row">
+					<div class="col-md-6">
+						<h4>Who we Are?</h4>
+						<img src="Images/Page1.png" alt="Logo" class="img" style=" margin:10px" >
+						<p class="text">
+							Aspirit is the spark that ignites your travel dreams. We believe that every journey
+							should be a memorable one,which is why we're dedicated to providing you with an
+							exceptional car rental experience.With our passion
+							for travel and commitment to excellence, we'll help you 
+							create unforgettable memories on the road.
+						</p>						
+					</div>
+					
+					<div class="col-md-2 text  contain2">
+
+						<h5>Quick links
+						</h5>
+						
+						<ul class="stro">
+							<li>
+								<a href="about us.html"> About Us</a>
+							</li>
+						</ul >
+						
+						<ul class="stro">
+							<li>
+								<a href="privacy.html">Privacy Policy</a>
+							</li>
+						</ul>
+					</div>
+		
+					<div class="col-md-2 text contain2">
+						<h5>Contacts</h5>
+						<ul class="stro">
+							<li>
+                                 <i class="bi bi-phone"></i> <a href="tel:+917680915847"> Phone-No</a>
+							</li>
+						</ul>
+						<ul class="stro">						
+							<li>
+								<i class="bi bi-envelope"></i> <a href="mailto:Aravindswamy023@gmail.com"> Mail-Id</a>
+							</li>
+						</ul>
+						<ul class="stro">
+							<li>
+								<i class="bi bi-geo-alt-fill"></i> <a href="https://maps.app.goo.gl/PoifdoKjbQhwikBg6?g_st=aw">Location</a>
+							</li>
+						</ul>
+						<ul class="stro">
+							<li>
+								<i class="bi bi-instagram"></i> <a href="https://www.instagram.com/spirit_selfdrives?igsh=NmQ4dG5lbGU3bW8x"> Instagarm</a>
+							</li>
+						</ul>
+					</div>	
+					
+					<div class="col-md-2">
+						<button type="button" class="ton"data-toggle="dropdown">
+						Designed By <i class="fa fa-chevron-down "></i> </button>
+						<ul class="dropdown-menu ton text1" >
+							<li>Tanuja.K</li>
+							<li>Preethi.K</li>
+							<li>Ramya.G</li>
+							<li> Poojitha.G</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
